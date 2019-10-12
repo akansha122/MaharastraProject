@@ -14,9 +14,6 @@ public class Admin {
 	private String password;
 	@OneToMany(mappedBy = "admin")
 	List<Customer> customer;
-	public Admin() {
-		// TODO Auto-generated constructor stub
-	}
 
 	public String getAdminName() {
 		return adminName;
@@ -32,11 +29,6 @@ public class Admin {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	@Override
-	public String toString() {
-		return "Admin [adminName=" + adminName + ", password=" + password + "]";
 	}
 
 	public Admin(String adminName, String password) {

@@ -1,4 +1,4 @@
-package com.zensar.dao;
+package com.zensar.daos;
 
 import java.util.List;
 

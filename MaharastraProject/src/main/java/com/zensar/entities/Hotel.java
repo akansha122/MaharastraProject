@@ -1,44 +1,46 @@
 package com.zensar.entities;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Hotel")
+@Table(name = "Hotel")
 public class Hotel {
 	@Id
-	private int hotel_id;
-	private String hotel_name;
+	private int hotelId;
+	private String hotelName;
 	private String location;
-	private int phone_no;
-	private String email;
-	@ManyToMany
-	private Customer customer;
-	@OneToMany(mappedBy = "hotel")
-	List<Room> room;
-	
-	
-	public int getHotel_id() {
-		return hotel_id;
+	private int phoneNo;
+	private String emailId;
+
+	public Hotel() {
+		// TODO Auto-generated constructor stub
 	}
 
-	public void setHotel_id(int hotel_id) {
-		this.hotel_id = hotel_id;
+	public Hotel(int hotelId, String hotelName, String location, int phoneNo, String emailId) {
+		super();
+		this.hotelId = hotelId;
+		this.hotelName = hotelName;
+		this.location = location;
+		this.phoneNo = phoneNo;
+		this.emailId = emailId;
 	}
 
-	public String getHotel_name() {
-		return hotel_name;
+	public int getHotelId() {
+		return hotelId;
 	}
 
-	public void setHotel_name(String hotel_name) {
-		this.hotel_name = hotel_name;
+	public void setHotelId(int hotelId) {
+		this.hotelId = hotelId;
+	}
+
+	public String getHotelName() {
+		return hotelName;
+	}
+
+	public void setHotelName(String hotelName) {
+		this.hotelName = hotelName;
 	}
 
 	public String getLocation() {
@@ -49,20 +51,26 @@ public class Hotel {
 		this.location = location;
 	}
 
-	public int getPhone_no() {
-		return phone_no;
+	public int getPhoneNo() {
+		return phoneNo;
 	}
 
-	public void setPhone_no(int phone_no) {
-		this.phone_no = phone_no;
+	public void setPhoneNo(int phoneNo) {
+		this.phoneNo = phoneNo;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getEmailId() {
+		return emailId;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+	@Override
+	public String toString() {
+		return "Hotel [hotelId=" + hotelId + ", hotelName=" + hotelName + ", location=" + location + ", phoneNo="
+				+ phoneNo + ", emailId=" + emailId + "]";
 	}
 
 }

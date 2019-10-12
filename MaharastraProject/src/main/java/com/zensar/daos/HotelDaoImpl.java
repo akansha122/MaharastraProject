@@ -1,4 +1,4 @@
-package com.zensar.dao;
+package com.zensar.daos;
 
 import java.util.List;
 
@@ -18,9 +18,11 @@ public class HotelDaoImpl implements HotelDao {
 		Configuration configuration = new Configuration().configure();
 		SessionFactory factory = configuration.buildSessionFactory();
 		session = factory.openSession();
+
 	}
 
 	public List<Hotel> getAll() {
+		session.createQuery("From Hotel");
 		return session.createQuery("From Hotel").getResultList();
 	}
 

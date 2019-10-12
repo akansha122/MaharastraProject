@@ -10,6 +10,6 @@ public interface HotelBookingDao {
 	void insert(HotelBooking hb);
 	void update(HotelBooking hb);
 	void delete(HotelBooking hb);
-	 HotelBooking getById(int bookId) ;
+	HotelBooking getById(int bookId) ;
 
 }

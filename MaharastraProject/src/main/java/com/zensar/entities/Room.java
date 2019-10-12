@@ -17,10 +17,6 @@ public class Room {
 	@JoinColumn(name = "hotelId")
 	private Hotel hotel;
 
-	public Room() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public int getRoomId() {
 		return roomId;
 	}
@@ -53,8 +49,4 @@ public class Room {
 		this.rate = rate;
 	}
 
-	@Override
-	public String toString() {
-		return "Room [roomId=" + roomId + ", roomType=" + roomType + ", floorNo=" + floorNo + "]";
-	}
 }

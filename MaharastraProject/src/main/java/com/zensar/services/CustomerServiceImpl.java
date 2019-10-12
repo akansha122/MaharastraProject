@@ -6,6 +6,7 @@ import java.util.List;
 import com.zensar.dao.CustomerDao;
 import com.zensar.dao.CustomerDaoImpl;
 import com.zensar.entities.Customer;
+
 /**
  * @author Akansha Shah
  * @Creation_date 5th Oct 2019 10.23AM
@@ -14,6 +15,7 @@ import com.zensar.entities.Customer;
  * @Copyright Zensar Technologies. All rights reserved
  * @description It is service class used in business layer.
  */
+
 public class CustomerServiceImpl implements CustomerService {
 
 	private CustomerDao customerDao;
@@ -47,8 +49,8 @@ public class CustomerServiceImpl implements CustomerService {
 		List<Customer> list1 = customerDao.getAll();
 		List<Customer> list2 = new ArrayList();
 		for (Customer customer : list1) {
-			if(customer.getEmailId().equalsIgnoreCase(emailId))
-			list2.add(customer);
+			if (customer.getEmailId().equalsIgnoreCase(emailId))
+				list2.add(customer);
 		}
 		return list2;
 	}
@@ -57,10 +59,14 @@ public class CustomerServiceImpl implements CustomerService {
 		List<Customer> list1 = customerDao.getAll();
 		List<Customer> list2 = new ArrayList();
 		for (Customer customer : list1) {
-			if(customer.getCustomerName().equalsIgnoreCase(customerName))
-			list2.add(customer);
+			if (customer.getCustomerName().equalsIgnoreCase(customerName))
+				list2.add(customer);
 		}
 		return list2;
+	}
+
+	public long customerCount() {
+		return findAllCustomer().size();
 	}
 
 }

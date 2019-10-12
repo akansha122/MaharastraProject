@@ -54,26 +54,12 @@ public class HotelBooking {
 		this.noOfPerson = noOfPerson;
 	}
 
-	public int getBeds() {
-		return beds;
-	}
-
-	public void setBeds(int beds) {
-		this.beds = beds;
-	}
-
 	public Date getCheckOutDate() {
 		return checkOutDate;
 	}
 
 	public void setCheckOutDate(Date checkOutDate) {
 		this.checkOutDate = checkOutDate;
-	}
-
-	@Override
-	public String toString() {
-		return "HotelBooking=>BookId=" +bookId+"=>BookingDate=" + bookingDate + "=>CheckInDate="+ checkInDate
-				+ ", checkOutDate=" + checkOutDate + ", noOfPerson=" + noOfPerson + ", beds=" + beds + "]";
 	}
 
 }

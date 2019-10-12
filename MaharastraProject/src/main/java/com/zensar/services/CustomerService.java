@@ -20,9 +20,12 @@ public interface CustomerService {
     Customer findCustomerById(int customerId);
     List<Customer> getCustomerByEmail(String emailId);
     List<Customer> getCustomerByName(String customerName);
+    long customerCount();
+    
 	/*
 	 * public boolean checkLogin(String emailId,String password); public boolean
 	 * checkIfUserExists(String emailId); public boolean resetPassword(String
 	 * emailId,String newPassword);
 	 */
+	 
 }
